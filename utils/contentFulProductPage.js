@@ -12,11 +12,11 @@ const client = require('contentful').createClient({
 });
 
 export async function fetchEntries() {
-  const response = await client.getContentType('page');
+  const response = await client.getContentType('productDetail');
   const entries = await client.getEntries();
 
-  // console.log(response);
-  // console.log(entries);
+  console.log(response);
+  console.log(entries);
 
   if (entries.items) return entries.items;
 }
